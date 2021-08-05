@@ -2,7 +2,7 @@ package tourGuide.user;
 
 import gpsUtil.location.Attraction;
 import gpsUtil.location.VisitedLocation;
-
+// ms-reward // ms-user
 public class UserReward {
 
 	public final VisitedLocation visitedLocation;

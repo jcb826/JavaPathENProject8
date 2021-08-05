@@ -40,7 +40,7 @@ public class TestRewardsService {
 		tourGuideService.tracker.stopTracking();
 		assertTrue(userRewards.size() == 1);
 	}
-	
+	//ms-gps
 	@Test
 	public void isWithinAttractionProximity() {
 
@@ -60,7 +60,7 @@ public class TestRewardsService {
 		InternalTestHelper.setInternalUserNumber(1);
 		TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
 		rewardsService.calculateRewards(tourGuideService.getAllUsers().get(0));
-		List<UserReward> userRewards = tourGuideService.getUserRewards(tourGuideService.getAllUsers().get(0));
+		List<UserReward> userRewards = tourGuideService.getUserRewards(tourGuideService.getAllUsers().get(0).getUserName());
 		tourGuideService.tracker.stopTracking();
 
 		assertEquals(gpsUtil.getAttractions().size(), userRewards.size());

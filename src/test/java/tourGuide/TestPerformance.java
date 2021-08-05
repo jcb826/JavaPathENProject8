@@ -41,7 +41,7 @@ public class TestPerformance {
 	 *          assertTrue(TimeUnit.MINUTES.toSeconds(20) >= TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()));
 	 */
 	
-
+// a migrer dans user
 	@Test
 	public void highVolumeTrackLocation() {
 		Locale.setDefault(new Locale("en", "US"));
@@ -66,7 +66,7 @@ public class TestPerformance {
 		assertTrue(TimeUnit.MINUTES.toSeconds(15) >= TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()));
 	}
 	
-
+// dans MS-reward
 	@Test
 	public void highVolumeGetRewards() {
 		GpsUtil gpsUtil = new GpsUtil();

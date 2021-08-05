@@ -21,7 +21,8 @@ import tourGuide.user.User;
 import tourGuide.user.UserReward;
 import tripPricer.Provider;
 import tripPricer.TripPricer;
-
+//dans ms-user
+// dans pour chaque methode de cette classe creer son endPoint
 @Service
 public class TourGuideService {
 	private Logger logger = LoggerFactory.getLogger(TourGuideService.class);
@@ -44,32 +45,36 @@ public class TourGuideService {
 		tracker = new Tracker(this);
 		addShutDownHook();
 	}
-	
-	public List<UserReward> getUserRewards(User user) {
-		return user.getUserRewards();
+	// reward
+
+	public List<UserReward> getUserRewards(String username) {
+
+		return this.getUser(username).getUserRewards();
 	}
-	
+
+
+	// user
 	public VisitedLocation getUserLocation(User user) {
 		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ?
 			user.getLastVisitedLocation() :
 			trackUserLocation(user);
 		return visitedLocation;
 	}
-	
+	//user
 	public User getUser(String userName) {
 		return internalUserMap.get(userName);
 	}
-	
+	// user
 	public List<User> getAllUsers() {
 		return internalUserMap.values().stream().collect(Collectors.toList());
 	}
-	
+	// user
 	public void addUser(User user) {
 		if(!internalUserMap.containsKey(user.getUserName())) {
 			internalUserMap.put(user.getUserName(), user);
 		}
 	}
-	
+	// user
 	public List<Provider> getTripDeals(User user) {
 		int cumulatativeRewardPoints = user.getUserRewards().stream().mapToInt(i -> i.getRewardPoints()).sum();
 		List<Provider> providers = tripPricer.getPrice(tripPricerApiKey, user.getUserId(), user.getUserPreferences().getNumberOfAdults(), 
@@ -77,7 +82,7 @@ public class TourGuideService {
 		user.setTripDeals(providers);
 		return providers;
 	}
-	
+	// user
 	public VisitedLocation trackUserLocation(User user) {
 		NumberFormat numberFormat = NumberFormat.getInstance(Locale.US);
 		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());
@@ -85,7 +90,7 @@ public class TourGuideService {
 		rewardsService.calculateRewards(user);
 		return visitedLocation;
 	}
-
+// gps
 	public List<Attraction> getNearByAttractions(VisitedLocation visitedLocation) {
 		List<Attraction> nearbyAttractions = new ArrayList<>();
 		for(Attraction attraction : gpsUtil.getAttractions()) {

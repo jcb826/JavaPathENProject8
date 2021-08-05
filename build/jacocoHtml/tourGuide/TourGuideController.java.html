@@ -45,10 +45,10 @@ import tripPricer.Provider;
 <span class="nc" id="L45">    	VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));</span>
 <span class="nc" id="L46">    	return JsonStream.serialize(tourGuideService.getNearByAttractions(visitedLocation));</span>
     }
-    
+    // dans ms-user
     @RequestMapping(&quot;/getRewards&quot;) 
     public String getRewards(@RequestParam String userName) {
-<span class="nc" id="L51">    	return JsonStream.serialize(tourGuideService.getUserRewards(getUser(userName)));</span>
+<span class="nc" id="L51">    	return JsonStream.serialize(tourGuideService.getUserRewards(userName));</span>
     }
     
     @RequestMapping(&quot;/getAllCurrentLocations&quot;)
