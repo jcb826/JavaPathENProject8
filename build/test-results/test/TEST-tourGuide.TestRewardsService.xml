@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tourGuide.TestRewardsService" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-04T18:09:42" hostname="DESKTOP-M44PKM2" time="12.321">
+<testsuite name="tourGuide.TestRewardsService" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-17T14:03:43" hostname="DESKTOP-M44PKM2" time="0.05">
   <properties/>
-  <testcase name="nearAllAttractions" classname="tourGuide.TestRewardsService" time="12.321"/>
-  <system-out><![CDATA[20:09:42.670 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
-20:09:42.679 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
-20:09:42.757 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 1 internal test users.
-20:09:42.757 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
-20:09:42.764 [pool-1-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 1 users.
-]]></system-out>
-  <system-err><![CDATA[août 04, 2021 8:09:42 PM org.javamoney.moneta.DefaultMonetaryContextFactory createMonetaryContextNonNullConfig
-INFOS: Using custom MathContext: precision=256, roundingMode=HALF_EVEN
-]]></system-err>
+  <testcase name="isWithinAttractionProximity" classname="tourGuide.TestRewardsService" time="0.05"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
