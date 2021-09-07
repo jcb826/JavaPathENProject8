@@ -43,7 +43,7 @@ public class RewardsService {
 <span class="fc bfc" id="L43" title="All 2 branches covered.">        for (VisitedLocation visitedLocation : userLocations) {</span>
 <span class="fc bfc" id="L44" title="All 2 branches covered.">            for (Attraction attraction : attractions) {</span>
 <span class="fc bfc" id="L45" title="All 2 branches covered.">                if (user.getUserRewards().stream().noneMatch(r -&gt; r.attraction.attractionName.equals(attraction.attractionName))) {</span>
-<span class="pc bpc" id="L46" title="1 of 2 branches missed.">                    if (nearAttraction(visitedLocation, attraction)) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                    if (nearAttraction(visitedLocation, attraction)) {</span>
 <span class="fc" id="L47">                        user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user)));</span>
                     }
                 }
@@ -56,7 +56,7 @@ public class RewardsService {
     }
 // user
     private boolean nearAttraction(VisitedLocation visitedLocation, Attraction attraction) {
-<span class="pc bpc" id="L59" title="1 of 2 branches missed.">        return getDistance(attraction, visitedLocation.location) &gt; proximityBuffer ? false : true;</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        return getDistance(attraction, visitedLocation.location) &gt; proximityBuffer ? false : true;</span>
     }
 //reward
     private int getRewardPoints(Attraction attraction, User user) {

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tourGuide.TestRewardsService" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-17T14:03:43" hostname="DESKTOP-M44PKM2" time="0.05">
-  <properties/>
-  <testcase name="isWithinAttractionProximity" classname="tourGuide.TestRewardsService" time="0.05"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -85,10 +85,10 @@ public class TourGuideService {
 	// user
 	public VisitedLocation trackUserLocation(User user) {
 <span class="fc" id="L87">		NumberFormat numberFormat = NumberFormat.getInstance(Locale.US);</span>
-<span class="nc" id="L88">		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());</span>
-<span class="nc" id="L89">		user.addToVisitedLocations(visitedLocation);</span>
-<span class="nc" id="L90">		rewardsService.calculateRewards(user);</span>
-<span class="nc" id="L91">		return visitedLocation;</span>
+<span class="fc" id="L88">		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());</span>
+<span class="fc" id="L89">		user.addToVisitedLocations(visitedLocation);</span>
+<span class="fc" id="L90">		rewardsService.calculateRewards(user);</span>
+<span class="fc" id="L91">		return visitedLocation;</span>
 	}
 // gps
 	public List&lt;Attraction&gt; getNearByAttractions(VisitedLocation visitedLocation) {
